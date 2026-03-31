@@ -17,6 +17,9 @@ nav {
     background: #2c3e50;
     padding: 15px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 nav a {
     color: white;
@@ -75,6 +78,7 @@ code {
     margin: 10px 0;
     border-radius: 6px;
     font-size: 14px;
+    overflow-x: auto;
 }
 
 footer {
@@ -90,9 +94,7 @@ footer {
 
 <nav>
     <a href="#about">About</a>
-    <a href="#project">Project</a>
-    <a href="#workflow">Workflow</a>
-    <a href="#tableau">Tableau</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -103,6 +105,7 @@ footer {
 
 <div class="container">
 
+<!-- About Me -->
 <div class="card" id="about">
     <h2>About Me</h2>
     <p>
@@ -111,39 +114,37 @@ footer {
     </p>
 </div>
 
-<div class="card" id="project">
-    <h2>Credit Card Fraud Detection Project</h2>
-    <p>
-        This project focuses on identifying fraudulent transactions using data analysis techniques.
-        It combines Python, SQL, and Tableau to analyze patterns and build a fraud scoring system.
-    </p>
+<!-- Projects -->
+<div class="card" id="projects">
+    <h2>My Projects</h2>
 
-    <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">
-        View Full Project on GitHub
-    </a>
-</div>
+    <!-- Project 1 -->
+    <div class="card">
+        <h3>Credit Card Fraud Detection</h3>
+        <p>
+            Identifying fraudulent transactions using Python, SQL, and Tableau. Built a fraud scoring system and visualized patterns.
+        </p>
+        <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-" target="_blank">View Full Project on GitHub</a>
 
-<div class="card" id="workflow">
-    <h2>Project Workflow</h2>
+        <!-- Nested Workflow -->
+        <div class="workflow">
+            <h4>Workflow & Analysis</h4>
 
-    <h3>Step 1: Data Understanding</h3>
-    <p>
-        Analyzed dataset features such as transaction amount, hour, merchant category,
-        device trust score, and fraud label. Observed fraud cases are rare.
-    </p>
+            <h5>Step 1: Data Understanding</h5>
+            <p>
+                Analyzed dataset features: transaction amount, transaction hour, merchant category,
+                device trust score, location mismatch, foreign transaction, and fraud label. Observed that fraud is rare (~1-2%).
+            </p>
 
-    <h3>Step 2: Python Analysis</h3>
-    <p>
-        Used Pandas for data cleaning and Matplotlib/Seaborn for visualization.
-        Identified patterns such as high transaction amounts and high velocity in fraud cases.
-    </p>
+            <h5>Step 2: Python Analysis</h5>
+            <p>
+                Used Pandas for data cleaning and Matplotlib/Seaborn for visualization.
+                Identified high transaction amounts and high velocity as fraud indicators.
+            </p>
 
-    <h3>Step 3: SQL Fraud Scoring</h3>
-    <p>
-        Created a fraud scoring system using SQL CASE statements:
-    </p>
-
-    <code>
+            <h5>Step 3: SQL Fraud Scoring</h5>
+            <p>Created a fraud scoring system using SQL CASE statements:</p>
+            <code>
 CASE 
  WHEN amount > 2000 THEN 2
  WHEN foreign_transaction = 1 THEN 2
@@ -151,48 +152,39 @@ CASE
  WHEN device_trust_score < 0.3 THEN 2
  ELSE 0
 END AS fraud_score
-    </code>
+            </code>
+            <p>This ranked transactions based on risk level.</p>
 
-    <p>
-        This helped rank transactions based on risk level.
-    </p>
+            <h5>Step 4: Tableau Visualization</h5>
+            <p>Built dashboards to visualize fraud patterns across multiple dimensions.</p>
 
-    <h3>Step 4: Tableau Visualization</h3>
-    <p>
-        Built dashboards to visualize fraud patterns across multiple dimensions.
-    </p>
+            <h5>Step 5: Key Insights</h5>
+            <ul>
+                <li>High-value transactions are more likely fraudulent</li>
+                <li>Foreign transactions increase fraud probability</li>
+                <li>Low device trust score is a strong indicator</li>
+                <li>High transaction velocity signals suspicious behavior</li>
+            </ul>
 
-    <h3>Step 5: Key Insights</h3>
-    <ul>
-        <li>High-value transactions are more likely fraudulent</li>
-        <li>Foreign transactions increase fraud probability</li>
-        <li>Low device trust score is a strong indicator</li>
-        <li>High transaction velocity signals suspicious behavior</li>
-    </ul>
+            <h5>Step 6: Tableau Dashboards</h5>
+            <p><b>Fraud Overview Dashboard:</b></p>
+            <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard1#1" target="_blank">View Dashboard</a>
+
+            <p><b>Transaction Behavior Dashboard:</b></p>
+            <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard2#1" target="_blank">View Dashboard</a>
+
+            <p><b>Risk Analysis Dashboard:</b></p>
+            <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard3#1" target="_blank">View Dashboard</a>
+        </div>
+    </div>
+
 </div>
 
-<div class="card" id="tableau">
-    <h2>Tableau Dashboards</h2>
-
-    <p><b>Fraud Overview Dashboard</b></p>
-    <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard1#1">View Dashboard</a>
-
-    <p><b>Transaction Behavior Dashboard</b></p>
-    <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard2#1">View Dashboard</a>
-
-    <p><b>Risk Analysis Dashboard</b></p>
-    <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard3#1">View Dashboard</a>
-</div>
-
+<!-- Contact -->
 <div class="card" id="contact">
     <h2>Contact & Connect</h2>
     <p>Email: <a href="mailto:sushmitadhital3@gmail.com">sushmitadhital3@gmail.com</a></p>
-   
-    <p>LinkedIn: 
-  <a href="https://www.linkedin.com/in/sushmita-dhital/" target="_blank" style="text-decoration:none;">
-    <span class="btn">View LinkedIn</span>
-  </a>
-</p>
+    <p>LinkedIn: <a class="btn" href="https://www.linkedin.com/in/sushmita-dhital/" target="_blank">View LinkedIn</a></p>
     <p>Tableau Public: <a class="btn" href="https://public.tableau.com/app/profile/sushmita.dhital/vizzes" target="_blank">View Tableau Profile</a></p>
 </div>
 
@@ -200,5 +192,6 @@ END AS fraud_score
     <p>© 2026 Sushmita | Data Analyst Portfolio</p>
 </footer>
 
+</div>
 </body>
 </html>
