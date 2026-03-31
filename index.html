@@ -68,12 +68,20 @@ header {
     background: #16a085;
 }
 
+code {
+    display: block;
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background: #2c3e50;
     color: white;
-    margin-top: 20px;
 }
 </style>
 </head>
@@ -82,7 +90,7 @@ footer {
 
 <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#project">Project</a>
     <a href="#workflow">Workflow</a>
     <a href="#tableau">Tableau</a>
     <a href="#contact">Contact</a>
@@ -98,64 +106,68 @@ footer {
 <div class="card" id="about">
     <h2>About Me</h2>
     <p>
-        I'm a Computer Science graduate from Southern New Hampshire University with a strong passion for data analysis.
-        I specialize in SQL, Python, and Tableau to transform raw data into meaningful insights.
+        I am a Computer Science graduate with hands-on experience in data analysis using SQL, Python, and Tableau.
+        I enjoy transforming raw data into meaningful insights and building data-driven solutions.
     </p>
 </div>
 
-<div class="card" id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
+<div class="card" id="project">
+    <h2>Credit Card Fraud Detection Project</h2>
+    <p>
+        This project focuses on identifying fraudulent transactions using data analysis techniques.
+        It combines Python, SQL, and Tableau to analyze patterns and build a fraud scoring system.
+    </p>
 
-        <div>
-            <h3>Credit Card Fraud Detection</h3>
-            <p>End-to-end project using Python, SQL, and Tableau to identify fraud patterns.</p>
-            <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">View Project</a>
-        </div>
-
-        <div>
-            <h3>More Projects</h3>
-            <p>Additional projects coming soon.</p>
-            <a class="btn" href="#">Coming Soon</a>
-        </div>
-
-    </div>
+    <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">
+        View Full Project on GitHub
+    </a>
 </div>
 
 <div class="card" id="workflow">
-    <h2>Project Workflow: Credit Card Fraud Detection</h2>
+    <h2>Project Workflow</h2>
 
     <h3>Step 1: Data Understanding</h3>
     <p>
-        Explored the dataset to understand features like transaction amount, transaction hour,
-        merchant category, and fraud indicator. Identified class imbalance where fraud cases are rare.
+        Analyzed dataset features such as transaction amount, hour, merchant category,
+        device trust score, and fraud label. Observed fraud cases are rare.
     </p>
 
-    <h3>Step 2: Data Analysis using Python</h3>
+    <h3>Step 2: Python Analysis</h3>
     <p>
-        Used Python (Pandas, Matplotlib, Seaborn) to clean data, analyze distributions,
-        and identify patterns. Found that fraud transactions tend to have higher amounts
-        and higher transaction frequency.
+        Used Pandas for data cleaning and Matplotlib/Seaborn for visualization.
+        Identified patterns such as high transaction amounts and high velocity in fraud cases.
     </p>
 
-    <h3>Step 3: SQL-Based Fraud Scoring</h3>
+    <h3>Step 3: SQL Fraud Scoring</h3>
     <p>
-        Built SQL queries using CASE statements to assign fraud risk scores based on multiple factors
-        such as transaction amount, foreign transactions, location mismatch, and device trust score.
+        Created a fraud scoring system using SQL CASE statements:
     </p>
 
-    <h3>Step 4: Visualization in Tableau</h3>
+    <code>
+CASE 
+ WHEN amount > 2000 THEN 2
+ WHEN foreign_transaction = 1 THEN 2
+ WHEN location_mismatch = 1 THEN 1
+ WHEN device_trust_score < 0.3 THEN 2
+ ELSE 0
+END AS fraud_score
+    </code>
+
     <p>
-        Created dashboards to visualize fraud patterns including fraud vs non-fraud count,
-        fraud by amount, fraud by hour, and risk indicators.
+        This helped rank transactions based on risk level.
+    </p>
+
+    <h3>Step 4: Tableau Visualization</h3>
+    <p>
+        Built dashboards to visualize fraud patterns across multiple dimensions.
     </p>
 
     <h3>Step 5: Key Insights</h3>
     <ul>
-        <li>Fraud transactions have higher amounts</li>
-        <li>Foreign transactions show higher fraud rates</li>
-        <li>High transaction velocity indicates suspicious behavior</li>
-        <li>Combining features improves fraud detection accuracy</li>
+        <li>High-value transactions are more likely fraudulent</li>
+        <li>Foreign transactions increase fraud probability</li>
+        <li>Low device trust score is a strong indicator</li>
+        <li>High transaction velocity signals suspicious behavior</li>
     </ul>
 </div>
 
@@ -163,13 +175,13 @@ footer {
     <h2>Tableau Dashboards</h2>
 
     <p><b>Fraud Overview Dashboard</b></p>
-    <a class="btn" href="#">View Dashboard</a>
+    <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard1#1">View Dashboard</a>
 
     <p><b>Transaction Behavior Dashboard</b></p>
-    <a class="btn" href="#">View Dashboard</a>
+    <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard2#1">View Dashboard</a>
 
     <p><b>Risk Analysis Dashboard</b></p>
-    <a class="btn" href="#">View Dashboard</a>
+    <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard3#1">View Dashboard</a>
 </div>
 
 <div class="card" id="contact">
