@@ -1,104 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My ePortfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushmita | Data Analyst Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f7fa;
-            color: #333;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    color: #333;
+}
 
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+nav {
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #1abc9c;
+}
 
-        section {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2c3e50, #1abc9c);
+    color: white;
+}
 
-        h1, h2 {
-            margin-bottom: 10px;
-        }
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        li {
-            margin: 10px 0;
-        }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        a {
-            text-decoration: none;
-            color: #0077cc;
-            font-weight: bold;
-        }
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #1abc9c;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.btn:hover {
+    background: #16a085;
+}
 
-        a:hover {
-            color: #005999;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #2c3e50;
-            color: white;
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Welcome to My ePortfolio</h1>
-        <p>Explore my projects and achievements in Computer Science!</p>
-    </header>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#tableau">Tableau</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I'm a computer science student at Southern New Hampshire University, passionate about data analysis, SQL, Python, and Tableau.</p>
-    </section>
+<header>
+    <h1>Hi, I'm Sushmita 👋</h1>
+    <p>Data Analyst | SQL | Python | Tableau</p>
+</header>
 
-    <section>
-        <h2>My Projects</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">
-                Credit Card Fraud Detection Project
-                </a>
-            </li>
-            <li><a href="#">More projects coming soon</a></li>
-        </ul>
-    </section>
+<div class="container">
 
-    <section>
-        <h2>Tableau Dashboards</h2>
-        <ul>
-            <li><a href="#">Fraud Overview Dashboard</a></li>
-            <li><a href="#">Transaction Behavior Dashboard</a></li>
-            <li><a href="#">Risk Analysis Dashboard</a></li>
-        </ul>
-    </section>
+<div class="card" id="about">
+    <h2>About Me</h2>
+    <p>
+        I'm a Computer Science graduate from Southern New Hampshire University with a strong passion for data analysis.
+        I specialize in SQL, Python, and Tableau to transform raw data into meaningful insights.
+    </p>
+</div>
 
-    <footer>
-        <p>Contact me: <a href="mailto:sushmitadhital3@gmail.com">sushmitadhital3@gmail.com</a></p>
-    </footer>
+<div class="card" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+        <div>
+            <h3>Credit Card Fraud Detection</h3>
+            <p>End-to-end project using Python, SQL, and Tableau to identify fraud patterns.</p>
+            <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">View Project</a>
+        </div>
+
+        <div>
+            <h3>More Projects</h3>
+            <p>Additional projects coming soon.</p>
+            <a class="btn" href="#">Coming Soon</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="card" id="workflow">
+    <h2>Project Workflow: Credit Card Fraud Detection</h2>
+
+    <h3>Step 1: Data Understanding</h3>
+    <p>
+        Explored the dataset to understand features like transaction amount, transaction hour,
+        merchant category, and fraud indicator. Identified class imbalance where fraud cases are rare.
+    </p>
+
+    <h3>Step 2: Data Analysis using Python</h3>
+    <p>
+        Used Python (Pandas, Matplotlib, Seaborn) to clean data, analyze distributions,
+        and identify patterns. Found that fraud transactions tend to have higher amounts
+        and higher transaction frequency.
+    </p>
+
+    <h3>Step 3: SQL-Based Fraud Scoring</h3>
+    <p>
+        Built SQL queries using CASE statements to assign fraud risk scores based on multiple factors
+        such as transaction amount, foreign transactions, location mismatch, and device trust score.
+    </p>
+
+    <h3>Step 4: Visualization in Tableau</h3>
+    <p>
+        Created dashboards to visualize fraud patterns including fraud vs non-fraud count,
+        fraud by amount, fraud by hour, and risk indicators.
+    </p>
+
+    <h3>Step 5: Key Insights</h3>
+    <ul>
+        <li>Fraud transactions have higher amounts</li>
+        <li>Foreign transactions show higher fraud rates</li>
+        <li>High transaction velocity indicates suspicious behavior</li>
+        <li>Combining features improves fraud detection accuracy</li>
+    </ul>
+</div>
+
+<div class="card" id="tableau">
+    <h2>Tableau Dashboards</h2>
+
+    <p><b>Fraud Overview Dashboard</b></p>
+    <a class="btn" href="#">View Dashboard</a>
+
+    <p><b>Transaction Behavior Dashboard</b></p>
+    <a class="btn" href="#">View Dashboard</a>
+
+    <p><b>Risk Analysis Dashboard</b></p>
+    <a class="btn" href="#">View Dashboard</a>
+</div>
+
+<div class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sushmitadhital3@gmail.com">sushmitadhital3@gmail.com</a></p>
+</div>
+
+</div>
+
+<footer>
+    <p>© 2026 Sushmita | Data Analyst Portfolio</p>
+</footer>
 
 </body>
 </html>
-
