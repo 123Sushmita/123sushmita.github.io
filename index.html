@@ -7,14 +7,15 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f6f9;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #e5e7eb;
 }
 
+/* NAV */
 nav {
-    background: #2c3e50;
+    background: #111827;
     padding: 15px;
     text-align: center;
     position: sticky;
@@ -31,61 +32,84 @@ nav a:hover {
     color: #1abc9c;
 }
 
+/* HEADER */
 header {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #2c3e50, #1abc9c);
-    color: white;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #111827, #0b1220);
 }
 
+/* CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
 
+/* CARD */
 .card {
-    background: white;
+    background: #111827;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
+/* PROJECT GRID */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
+/* PROJECT CARD */
+.project-card {
+    background: #0f172a;
+    border: 1px solid #1f2937;
+    padding: 20px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+    border-color: #1abc9c;
+}
+
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 10px 15px;
     background: #1abc9c;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
     margin-top: 10px;
+    font-weight: bold;
 }
 .btn:hover {
     background: #16a085;
 }
 
-code {
-    display: block;
-    background: #eee;
+/* DETAILS */
+details {
+    margin-top: 10px;
+    background: #111827;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 6px;
-    font-size: 14px;
-    overflow-x: auto;
+    border-radius: 10px;
+}
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1abc9c;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: #2c3e50;
-    color: white;
+    background: #111827;
 }
 </style>
 </head>
@@ -100,92 +124,109 @@ footer {
 
 <header>
     <h1>Hi, I'm Sushmita 👋</h1>
-    <p>Data Analyst | SQL | Python | Tableau</p>
+    <p>Data Analyst | SQL | Python | Power BI | Tableau</p>
 </header>
 
 <div class="container">
 
-<!-- About Me -->
+<!-- ABOUT -->
 <div class="card" id="about">
     <h2>About Me</h2>
+
     <p>
-        I am a Computer Science graduate with hands-on experience in data analysis using SQL, Python, and Tableau.
-        I enjoy transforming raw data into meaningful insights and building data-driven solutions.
+        I am a Data Analyst with experience in SQL, Python, and BI tools such as Power BI and Tableau.
+        I specialize in end-to-end data workflows including data extraction, transformation, cleaning, analysis, and visualization.
+    </p>
+
+    <p>
+        In my recent role at Park National Bank, I worked closely with business and product teams to transform raw data into
+        meaningful and actionable insights. I used SQL for data extraction and transformation, Python for data cleaning and preprocessing,
+        and BI tools for dashboard development and reporting. My work helped reduce manual reporting efforts by 40% and improved decision-making efficiency.
+    </p>
+
+    <p>
+        I enjoy working on full end-to-end analytics workflows from raw data to final insights and dashboards.
     </p>
 </div>
 
-<!-- Projects -->
+<!-- PROJECTS -->
 <div class="card" id="projects">
     <h2>My Projects</h2>
 
-    <!-- Project 1 -->
-    <div class="card">
-        <h3>Credit Card Fraud Detection</h3>
-        <p>
-            Identifying fraudulent transactions using Python, SQL, and Tableau. Built a fraud scoring system and visualized patterns.
-        </p>
-        <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-" target="_blank">View Full Project on GitHub</a>
+    <div class="projects">
 
-        <!-- Nested Workflow -->
-        <div class="workflow">
-            <h4>Workflow & Analysis</h4>
+        <!-- PROJECT 1 -->
+        <div class="project-card">
+            <h3>💳 Credit Card Fraud Detection</h3>
+            <p>End-to-end fraud detection using SQL, Python, and Tableau.</p>
 
-            <h5>Step 1: Data Understanding</h5>
-            <p>
-                Analyzed dataset features: transaction amount, transaction hour, merchant category,
-                device trust score, location mismatch, foreign transaction, and fraud label. Observed that fraud is rare (~1-2%).
-            </p>
+            <details>
+                <summary>View Breakdown</summary>
 
-            <h5>Step 2: Python Analysis</h5>
-            <p>
-                Used Pandas for data cleaning and Matplotlib/Seaborn for visualization.
-                Identified high transaction amounts and high velocity as fraud indicators.
-            </p>
+                <h4>🐍 Python</h4>
+                <ul>
+                    <li>Data cleaning and preprocessing</li>
+                    <li>Exploratory Data Analysis (EDA)</li>
+                    <li>Pattern detection in transactions</li>
+                </ul>
 
-            <h5>Step 3: SQL Fraud Scoring</h5>
-            <p>Created a fraud scoring system using SQL CASE statements:</p>
-            <code>
-CASE 
- WHEN amount > 2000 THEN 2
- WHEN foreign_transaction = 1 THEN 2
- WHEN location_mismatch = 1 THEN 1
- WHEN device_trust_score < 0.3 THEN 2
- ELSE 0
-END AS fraud_score
-            </code>
-            <p>This ranked transactions based on risk level.</p>
+                <h4>🗄️ SQL</h4>
+                <ul>
+                    <li>Data extraction using joins</li>
+                    <li>Fraud scoring using CASE logic</li>
+                </ul>
 
-            <h5>Step 4: Tableau Visualization</h5>
-            <p>Built dashboards to visualize fraud patterns across multiple dimensions.</p>
+                <h4>📊 Tableau</h4>
+                <ul>
+                    <li>Dashboard development (in progress / to be added)</li>
+                </ul>
+            </details>
 
-            <h5>Step 5: Key Insights</h5>
-            <ul>
-                <li>High-value transactions are more likely fraudulent</li>
-                <li>Foreign transactions increase fraud probability</li>
-                <li>Low device trust score is a strong indicator</li>
-                <li>High transaction velocity signals suspicious behavior</li>
-            </ul>
-
-            <h5>Step 6: Tableau Dashboards</h5>
-            <p><b>Fraud Overview Dashboard:</b></p>
-            <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard1#1" target="_blank">View Dashboard</a>
-
-            <p><b>Transaction Behavior Dashboard:</b></p>
-            <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard2#1" target="_blank">View Dashboard</a>
-
-            <p><b>Risk Analysis Dashboard:</b></p>
-            <a class="btn" href="https://public.tableau.com/authoring/creditcardFraud/Dashboard3#1" target="_blank">View Dashboard</a>
+            <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-" target="_blank">
+                View Project
+            </a>
         </div>
-    </div>
 
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+            <h3>🎬 Netflix Streaming Analysis 🚧</h3>
+            <p>In progress: analyzing user behavior, engagement trends, and predictive insights.</p>
+
+            <details>
+                <summary>View Breakdown</summary>
+
+                <h4>🐍 Python</h4>
+                <ul>
+                    <li>Data cleaning and preprocessing</li>
+                    <li>Feature engineering (age groups, time features)</li>
+                    <li>Trend analysis & visualization</li>
+                </ul>
+
+                <h4>🗄️ SQL</h4>
+                <ul>
+                    <li>Data extraction from multiple tables</li>
+                    <li>Joins between user, content, and watch data</li>
+                </ul>
+
+                <h4>📊 Visualization</h4>
+                <ul>
+                    <li>Watch time trend analysis</li>
+                    <li>Engagement insights</li>
+                </ul>
+            </details>
+
+            <a class="btn" href="https://github.com/123Sushmita/Netflix-Streaming-Analysis" target="_blank">
+                View Project
+            </a>
+        </div>
+
+    </div>
 </div>
 
-<!-- Contact -->
+<!-- CONTACT -->
 <div class="card" id="contact">
-    <h2>Contact & Connect</h2>
-    <p>Email: <a href="mailto:sushmitadhital3@gmail.com">sushmitadhital3@gmail.com</a></p>
-    <p>LinkedIn: <a class="btn" href="https://www.linkedin.com/in/sushmita-dhital/" target="_blank">View LinkedIn</a></p>
-    <p>Tableau Public: <a class="btn" href="https://public.tableau.com/app/profile/sushmita.dhital/vizzes" target="_blank">View Tableau Profile</a></p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sushmitadhital3@gmail.com" style="color:#1abc9c;">sushmitadhital3@gmail.com</a></p>
 </div>
 
 <footer>
@@ -193,5 +234,6 @@ END AS fraud_score
 </footer>
 
 </div>
+
 </body>
 </html>
