@@ -3,242 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sushmita | Data Analyst Portfolio</title>
-
+<title>Sushmita | Data Analyst</title>
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b1220;
-    color: #e5e7eb;
-}
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+    }
 
-/* NAV */
-nav {
-    background: #111827;
-    padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-nav a:hover {
-    color: #1abc9c;
-}
+    header {
+        background: #020617;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #1e293b;
+    }
 
-/* HEADER */
-header {
-    text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #111827, #0b1220);
-}
+    h1 {
+        margin: 0;
+        font-size: 28px;
+        color: #38bdf8;
+    }
 
-/* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
+    .sub {
+        font-size: 14px;
+        color: #94a3b8;
+        margin-top: 5px;
+    }
 
-/* CARD */
-.card {
-    background: #111827;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-}
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
 
-/* PROJECT GRID */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
+    h2 {
+        border-bottom: 2px solid #1e293b;
+        padding-bottom: 5px;
+        color: #38bdf8;
+    }
 
-/* PROJECT CARD */
-.project-card {
-    background: #0f172a;
-    border: 1px solid #1f2937;
-    padding: 20px;
-    border-radius: 16px;
-    transition: all 0.3s ease;
-}
+    .card {
+        background: #020617;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 10px;
+        border: 1px solid #1e293b;
+    }
 
-.project-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
-    border-color: #1abc9c;
-}
+    a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #1abc9c;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 10px;
-    font-weight: bold;
-}
-.btn:hover {
-    background: #16a085;
-}
+    a:hover {
+        text-decoration: underline;
+    }
 
-/* DETAILS */
-details {
-    margin-top: 10px;
-    background: #111827;
-    padding: 10px;
-    border-radius: 10px;
-}
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: #1abc9c;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111827;
-}
+    img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
 </style>
 </head>
-
 <body>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
 <header>
-    <h1>Hi, I'm Sushmita 👋</h1>
-    <p>Data Analyst | SQL | Python | Power BI | Tableau</p>
+    <h1>Sushmita | Data Analyst</h1>
+    <div class="sub">Military Spouse | Dallas, Texas | your.email@example.com | <a href="https://github.com/123Sushmita" target="_blank">GitHub</a></div>
 </header>
 
 <div class="container">
 
-<!-- ABOUT -->
-<div class="card" id="about">
-    <h2>About Me</h2>
-
-    <p>
-        I am a Data Analyst with hands-on experience in SQL, Python, Power BI, and Tableau,
-        specializing in transforming raw, complex datasets into clear and actionable business insights.
-    </p>
-
-    <p>
-        In my previous role at Park National Bank, I worked closely with business and product teams
-        to support data-driven decision-making. I used SQL for data extraction and transformation,
-        Python for data cleaning and preprocessing, and BI tools for dashboard development and reporting.
-    </p>
-
-    <p>
-        My work involved analyzing large datasets, identifying trends, improving reporting accuracy,
-        and automating manual reporting processes, which helped reduce reporting effort by 40%
-        and improved overall business efficiency.
-    </p>
-
-    <p>
-        I enjoy working end-to-end in the analytics workflow — from data extraction to visualization —
-        and turning data into meaningful business insights.
-    </p>
-</div>
-
-<!-- PROJECTS -->
-<div class="card" id="projects">
-    <h2>My Projects</h2>
-
-    <div class="projects">
-
-        <!-- PROJECT 1 -->
-        <div class="project-card">
-            <h3>💳 Credit Card Fraud Detection</h3>
-            <p>End-to-end fraud detection using SQL, Python, and Tableau.</p>
-
-            <details>
-                <summary>View Breakdown</summary>
-
-                <h4>🐍 Python</h4>
-                <ul>
-                    <li>Data cleaning and preprocessing</li>
-                    <li>Exploratory Data Analysis (EDA)</li>
-                    <li>Pattern detection in transactions</li>
-                </ul>
-
-                <h4>🗄️ SQL</h4>
-                <ul>
-                    <li>Data extraction using joins</li>
-                    <li>Fraud scoring using CASE logic</li>
-                </ul>
-
-                <h4>📊 Tableau</h4>
-                <ul>
-                    <li>Dashboard development (in progress)</li>
-                </ul>
-            </details>
-
-            <a class="btn" href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-" target="_blank">
-                View Project
-            </a>
-        </div>
-
-        <!-- PROJECT 2 -->
-        <div class="project-card">
-            <h3>🎬 Netflix Streaming Analysis 🚧</h3>
-            <p>In progress: analyzing user behavior, engagement trends, and predictive insights.</p>
-
-            <details>
-                <summary>View Breakdown</summary>
-
-                <h4>🐍 Python</h4>
-                <ul>
-                    <li>Data cleaning and preprocessing</li>
-                    <li>Feature engineering (age groups, time features)</li>
-                    <li>Trend analysis & visualization</li>
-                </ul>
-
-                <h4>🗄️ SQL</h4>
-                <ul>
-                    <li>Data extraction from multiple tables</li>
-                    <li>Joins between user, content, and watch data</li>
-                </ul>
-
-                <h4>📊 Visualization</h4>
-                <ul>
-                    <li>Watch time trend analysis</li>
-                    <li>Engagement insights</li>
-                </ul>
-            </details>
-
-            <a class="btn" href="https://github.com/123Sushmita/Netflix_streaming" target="_blank">
-                View Project
-            </a>
-        </div>
-
+    <h2>Introduction</h2>
+    <div class="card">
+        <p>I am a Data Analyst with 3+ years of experience transforming raw data into meaningful insights that drive business decisions. I specialize in data analysis, dashboard development, and identifying trends using tools like SQL, Python, Power BI, and Tableau.</p>
+        
+        <p>At my previous role at US Bank, I worked on analyzing financial and transactional data, building dashboards, and ensuring data accuracy to support risk assessment and business performance monitoring.</p>
     </div>
-</div>
 
-<!-- CONTACT -->
-<div class="card" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sushmitadhital3@gmail.com" style="color:#1abc9c;">sushmitadhital3@gmail.com</a></p>
-</div>
+    <h2>Credit Card Fraud Analysis Project</h2>
 
-<footer>
-    <p>© 2026 Sushmita | Data Analyst Portfolio</p>
-</footer>
+    <div class="card">
+        <h3>Fraud Overview Dashboard</h3>
+        <p>High-level summary of fraud trends and KPIs.</p>
+        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard1" target="_blank">View Dashboard</a>
+        <img src="images/dashboard1.png" alt="Fraud Overview Dashboard">
+    </div>
+
+    <div class="card">
+        <h3>Transaction Behavior Dashboard</h3>
+        <p>Analyzes transaction patterns and anomalies.</p>
+        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard2" target="_blank">View Dashboard</a>
+        <img src="images/dashboard2.png" alt="Transaction Dashboard">
+    </div>
+
+    <div class="card">
+        <h3>Risk Analysis Dashboard</h3>
+        <p>Identifies high-risk transactions and fraud indicators.</p>
+        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard3" target="_blank">View Dashboard</a>
+        <img src="images/dashboard3.png" alt="Risk Dashboard">
+    </div>
 
 </div>
 
