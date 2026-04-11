@@ -15,7 +15,6 @@
     --border:rgba(148,163,184,0.18);
     --good:#22c55e;
     --warn:#f59e0b;
-    --danger:#ef4444;
   }
 
   *{
@@ -36,7 +35,6 @@
     line-height:1.6;
   }
 
-  /* NAV */
   nav{
     position:sticky;
     top:0;
@@ -66,7 +64,6 @@
     text-decoration:none;
     margin-left:16px;
     font-size:14px;
-    transition:0.2s;
   }
 
   nav a:hover{color:var(--accent)}
@@ -112,7 +109,6 @@
     padding-bottom:8px;
   }
 
-  /* CARDS */
   .card{
     background:linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.7));
     border:1px solid var(--border);
@@ -141,7 +137,6 @@
   .completed{background:rgba(34,197,94,0.15);color:var(--good);border:1px solid rgba(34,197,94,0.3)}
   .inprogress{background:rgba(245,158,11,0.15);color:var(--warn);border:1px solid rgba(245,158,11,0.3)}
 
-  /* TAGS */
   .tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
   .tag{
     font-size:12px;
@@ -184,38 +179,12 @@
     background:rgba(2,6,23,0.6);
   }
 
-  /* SKILLS */
-  .skill{
-    margin-bottom:10px;
-  }
-
-  .bar{
-    height:8px;
-    background:#111827;
-    border-radius:10px;
-    overflow:hidden;
-    border:1px solid var(--border);
-  }
-
-  .fill{
-    height:100%;
-    background:linear-gradient(90deg,var(--accent),#60a5fa);
-  }
-
-  /* GRID */
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:18px;
-  }
-
   footer{
     text-align:center;
     padding:30px;
     color:var(--muted);
     border-top:1px solid var(--border);
   }
-
 </style>
 </head>
 
@@ -226,9 +195,9 @@
     <div class="logo">SUSHMITA DHITAL</div>
     <div>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="https://github.com/123Sushmita" target="_blank">GitHub</a>
     </div>
   </div>
 </nav>
@@ -244,22 +213,7 @@
 <section id="about" class="wrap">
   <h2>About</h2>
   <div class="card">
-    Data Analyst specializing in financial analytics, fraud detection, and business intelligence.
-    Experienced in transforming large datasets into actionable insights using SQL, Python, Tableau, and Power BI.
-  </div>
-</section>
-
-<section id="skills" class="wrap">
-  <h2>Skills</h2>
-
-  <div class="card">
-
-    <div class="skill">SQL<div class="bar"><div class="fill" style="width:95%"></div></div></div>
-    <div class="skill">Python<div class="bar"><div class="fill" style="width:90%"></div></div></div>
-    <div class="skill">Tableau<div class="bar"><div class="fill" style="width:92%"></div></div></div>
-    <div class="skill">Power BI<div class="bar"><div class="fill" style="width:88%"></div></div></div>
-    <div class="skill">Data Analysis<div class="bar"><div class="fill" style="width:93%"></div></div></div>
-
+    Data Analyst specializing in financial analytics, fraud detection, and business intelligence. Experienced in SQL, Python, Tableau, and Power BI to transform raw data into actionable insights.
   </div>
 </section>
 
@@ -268,7 +222,7 @@
 
   <div class="card">
     <h3>Data Analyst — Park National Bank</h3>
-    <div class="desc">Financial analytics, fraud detection, dashboards, and reporting.</div>
+    <div class="desc">Financial analytics, fraud detection, dashboard development, and reporting.</div>
 
     <div class="tags">
       <div class="tag">SQL</div>
@@ -279,17 +233,17 @@
     </div>
 
     <ul>
-      <li>Analyzed 1M+ financial transactions for fraud patterns and anomalies.</li>
-      <li>Built executive dashboards for KPI tracking and decision-making.</li>
+      <li>Analyzed 1M+ financial transactions for fraud detection and anomalies.</li>
+      <li>Built KPI dashboards for executive reporting.</li>
       <li>Automated reporting pipelines using Python.</li>
-      <li>Performed SQL-based data extraction and transformation.</li>
-      <li>Ensured data quality through validation frameworks.</li>
+      <li>Used SQL for data extraction, joins, and transformation.</li>
+      <li>Ensured data quality and reconciliation across systems.</li>
     </ul>
 
     <div class="metrics">
-      <div class="metric">📊 1M+ records</div>
-      <div class="metric">⚡ 40% faster reporting</div>
-      <div class="metric">🔍 Fraud detection insights</div>
+      <div class="metric">📊 1M+ records analyzed</div>
+      <div class="metric">⚡ Reporting automation</div>
+      <div class="metric">🔍 Fraud insights</div>
     </div>
   </div>
 </section>
@@ -297,68 +251,78 @@
 <section id="projects" class="wrap">
   <h2>Projects</h2>
 
-  <div class="grid">
+  <div class="card">
+    <span class="badge completed">COMPLETED</span>
+    <h3>Credit Card Fraud Detection (End-to-End Case Study)</h3>
 
-    <div class="card">
-      <span class="badge completed">COMPLETED</span>
-      <h3>Credit Card Fraud Detection</h3>
-
-      <div class="desc">
-        End-to-end case study using SQL, Python, and Tableau for fraud detection.
-      </div>
-
-      <div class="tags">
-        <div class="tag">Python</div>
-        <div class="tag">SQL</div>
-        <div class="tag">Tableau</div>
-        <div class="tag">EDA</div>
-      </div>
-
-      <ul>
-        <li>Built ETL pipeline using SQL + Python</li>
-        <li>Performed exploratory analysis on transaction behavior</li>
-        <li>Developed Tableau dashboards for insights</li>
-      </ul>
-
-      <div class="metrics">
-        <div class="metric">📊 280K+ transactions</div>
-        <div class="metric">🚨 Fraud pattern detection</div>
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">GitHub</a>
-        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard1">Dashboard 1</a>
-      </div>
+    <div class="desc">
+      Full data analytics pipeline from raw transaction data to insights using SQL, Python, and Tableau.
     </div>
 
-    <div class="card">
-      <span class="badge inprogress">IN PROGRESS</span>
-      <h3>Netflix Data Analysis</h3>
-
-      <div class="desc">Ongoing project analyzing Netflix trends and user behavior.</div>
-
-      <div class="tags">
-        <div class="tag">Python</div>
-        <div class="tag">SQL</div>
-        <div class="tag">Data Analysis</div>
-      </div>
-
-      <ul>
-        <li>Data cleaning in progress</li>
-        <li>EDA ongoing</li>
-      </ul>
-
-      <div class="metrics">
-        <div class="metric">🚧 Ongoing project</div>
-        <div class="metric">📊 Insight building</div>
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/123Sushmita/Netflix_streaming">GitHub</a>
-      </div>
+    <div class="tags">
+      <div class="tag">SQL</div>
+      <div class="tag">Python</div>
+      <div class="tag">Tableau</div>
+      <div class="tag">EDA</div>
+      <div class="tag">Data Cleaning</div>
     </div>
 
+    <h4 style="color:#38bdf8;margin-top:10px;">📌 End-to-End Documentation</h4>
+    <ul>
+      <li><b>Problem:</b> Detect fraudulent credit card transactions using behavioral patterns</li>
+      <li><b>Data Source:</b> Kaggle dataset stored in GitHub repository</li>
+      <li><b>SQL Work:</b> Extracted, joined, and aggregated transaction data for analysis</li>
+      <li><b>Python Work:</b> Cleaned data, handled missing values, performed EDA using Pandas & Matplotlib</li>
+      <li><b>Tableau:</b> Built dashboards for fraud overview, behavior trends, and risk analysis</li>
+      <li><b>Outcome:</b> Identified high-risk transaction patterns and anomaly behavior</li>
+    </ul>
+
+    <div class="metrics">
+      <div class="metric">📊 280K+ transactions</div>
+      <div class="metric">🚨 Fraud pattern detection</div>
+      <div class="metric">📈 Tableau dashboards</div>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-">GitHub</a>
+      <a href="https://public.tableau.com/views/creditcardFraud/Dashboard1">Dashboard</a>
+    </div>
   </div>
+
+  <div class="card">
+    <span class="badge inprogress">IN PROGRESS</span>
+    <h3>Netflix Data Analysis (Ongoing Case Study)</h3>
+
+    <div class="desc">
+      Ongoing analysis of Netflix data to understand user behavior and content trends.
+    </div>
+
+    <div class="tags">
+      <div class="tag">Python</div>
+      <div class="tag">SQL</div>
+      <div class="tag">Data Analysis</div>
+    </div>
+
+    <h4 style="color:#38bdf8;margin-top:10px;">📌 Current Workflow</h4>
+    <ul>
+      <li>Data cleaning and preprocessing in Python</li>
+      <li>SQL-based structuring for analysis</li>
+      <li>Exploratory data analysis (EDA)</li>
+      <li>Identifying content trends (genres, duration, release years)</li>
+      <li>Upcoming: Tableau dashboard development</li>
+    </ul>
+
+    <div class="metrics">
+      <div class="metric">🚧 Ongoing project</div>
+      <div class="metric">📊 EDA stage</div>
+      <div class="metric">🧠 Insight building</div>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/123Sushmita/Netflix_streaming">GitHub</a>
+    </div>
+  </div>
+
 </section>
 
 <footer>
@@ -367,4 +331,3 @@
 
 </body>
 </html>
-
