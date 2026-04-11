@@ -1,175 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sushmita Dhital | Data Analyst</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sushmita Dhital | Data Analyst Portfolio</title>
+
 <style>
   :root{
     --bg:#0b1220;
     --card:#0f172a;
-    --muted:#94a3b8;
     --text:#e2e8f0;
+    --muted:#94a3b8;
     --accent:#38bdf8;
     --border:#1f2a44;
   }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#020617, #0b1220);color:var(--text)}
-  header{padding:32px 20px;border-bottom:1px solid var(--border);background:radial-gradient(1200px 400px at 50% -200px, rgba(56,189,248,.25), transparent)}
-  .wrap{max-width:1100px;margin:auto}
-  h1{margin:0;font-size:34px;letter-spacing:.5px}
-  .title{color:var(--accent);font-weight:600;margin-top:6px}
-  .meta{margin-top:8px;color:var(--muted);font-size:14px}
-  .meta a{color:var(--accent);text-decoration:none}
-  .meta a:hover{text-decoration:underline}
 
-  section{padding:28px 20px}
-  h2{margin:0 0 14px 0;color:var(--accent);font-size:22px;border-bottom:1px solid var(--border);padding-bottom:8px}
+  *{box-sizing:border-box;margin:0;padding:0}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-  .card h3{margin:0 0 8px 0}
-  .desc{color:var(--muted);font-size:14px;margin-bottom:10px}
+  body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:linear-gradient(180deg,#020617,#0b1220);
+    color:var(--text);
+    line-height:1.6;
+  }
 
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
-  .tag{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);color:#cbd5f5;background:#020617}
+  .wrap{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+  }
 
-  .links a{margin-right:14px;color:var(--accent);text-decoration:none;font-size:14px}
-  .links a:hover{text-decoration:underline}
+  header{
+    padding:40px 20px;
+    text-align:center;
+    border-bottom:1px solid var(--border);
+    background:radial-gradient(circle at top, rgba(56,189,248,0.15), transparent 60%);
+  }
 
-  img{width:100%;border-radius:10px;border:1px solid var(--border);margin-top:10px}
+  h1{
+    font-size:38px;
+    letter-spacing:1px;
+  }
 
-  .footer{padding:20px;text-align:center;color:var(--muted);border-top:1px solid var(--border)}
+  .title{
+    color:var(--accent);
+    font-weight:600;
+    margin-top:6px;
+    font-size:18px;
+  }
+
+  .meta{
+    margin-top:10px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .meta a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+
+  section{
+    padding:30px 20px;
+  }
+
+  h2{
+    color:var(--accent);
+    margin-bottom:15px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:8px;
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  }
+
+  h3{margin-bottom:6px}
+
+  .desc{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:10px;
+  }
+
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:10px 0;
+  }
+
+  .tag{
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:#020617;
+    color:#cbd5f5;
+  }
+
+  ul{
+    padding-left:18px;
+    color:#cbd5f5;
+    font-size:14px;
+  }
+
+  ul li{
+    margin-bottom:6px;
+  }
+
+  .links a{
+    display:inline-block;
+    margin-right:12px;
+    margin-top:10px;
+    color:var(--accent);
+    text-decoration:none;
+    font-size:14px;
+  }
+
+  .links a:hover{
+    text-decoration:underline;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:18px;
+  }
+
+  footer{
+    text-align:center;
+    padding:20px;
+    color:var(--muted);
+    border-top:1px solid var(--border);
+  }
+
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="wrap">
-    <h1>SUSHMITA DHITAL</h1>
-    <div class="title">DATA ANALYST</div>
-    <div class="meta">
-      Military Spouse • sushmitadhital3@gmail.com • 
-      <a href="https://github.com/123Sushmita" target="_blank">GitHub</a>
-    </div>
+  <h1>SUSHMITA DHITAL</h1>
+  <div class="title">DATA ANALYST</div>
+  <div class="meta">
+    Military Spouse • Dallas, Texas • sushmitadhital3@gmail.com • 
+    <a href="https://github.com/123Sushmita" target="_blank">GitHub</a>
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <h2>Introduction</h2>
-    <div class="card">
-      <p>I am a Data Analyst focused on transforming raw data into actionable insights. My experience includes analyzing financial and transactional datasets, building dashboards, and identifying patterns to support risk assessment and business decisions.</p>
-      <p>I work with SQL, Python, Tableau, and Power BI to clean data, perform analysis, and present clear, data-driven results.</p>
-    </div>
+<section class="wrap">
+  <h2>Introduction</h2>
+  <div class="card">
+    <p>
+      I am a Data Analyst with experience in transforming raw financial and transactional data into actionable insights.
+      I specialize in SQL, Python, Tableau, and Power BI to analyze data, build dashboards, and support business decisions.
+    </p>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2>Experience</h2>
+<section class="wrap">
+  <h2>Experience</h2>
 
+  <div class="card">
+    <h3>Data Analyst — Park National Bank</h3>
+    <div class="desc">Financial data analysis, risk monitoring, dashboard development, and reporting for business decision support.</div>
+
+    <div class="tags">
+      <div class="tag">SQL</div>
+      <div class="tag">Python</div>
+      <div class="tag">Power BI</div>
+      <div class="tag">Tableau</div>
+      <div class="tag">Data Quality</div>
+      <div class="tag">Risk Analysis</div>
+    </div>
+
+    <ul>
+      <li>Analyzed large-scale financial and transactional datasets to identify fraud patterns and anomalies.</li>
+      <li>Built and maintained dashboards in Power BI and Tableau for KPI and risk tracking.</li>
+      <li>Developed optimized SQL queries for data extraction, cleaning, and transformation.</li>
+      <li>Automated reporting workflows using Python, reducing manual effort.</li>
+      <li>Worked with cross-functional teams to translate data into business insights.</li>
+      <li>Performed data validation and reconciliation for reporting accuracy.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section class="wrap">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
+    <!-- FRAUD PROJECT -->
     <div class="card">
-      <h3>Data Analyst — Park National Bank</h3>
-      <div class="desc">Financial data analysis, risk monitoring, and dashboard development supporting business and compliance decisions.</div>
+      <h3>Credit Card Fraud Detection</h3>
+      <div class="desc">
+        End-to-end analytics project identifying fraudulent transactions using SQL, Python, and Tableau dashboards.
+      </div>
 
       <div class="tags">
-        <div class="tag">SQL</div>
         <div class="tag">Python</div>
-        <div class="tag">Power BI</div>
+        <div class="tag">SQL</div>
         <div class="tag">Tableau</div>
-        <div class="tag">Data Quality</div>
-        <div class="tag">Risk Analysis</div>
+        <div class="tag">Data Analysis</div>
+        <div class="tag">EDA</div>
+        <div class="tag">Documentation</div>
       </div>
 
-      <ul style="color:#cbd5f5; padding-left:18px; line-height:1.6; font-size:14px;">
-        <li>Analyzed large-scale financial and transactional datasets to identify fraud patterns, anomalies, and risk indicators.</li>
-        <li>Developed and maintained interactive dashboards (Power BI, Tableau) to track KPIs, fraud trends, and operational performance.</li>
-        <li>Wrote optimized SQL queries to extract, clean, and join data from multiple sources ensuring data accuracy and consistency.</li>
-        <li>Automated data processing and reporting workflows using Python, reducing manual effort and improving efficiency.</li>
-        <li>Collaborated with cross-functional teams (risk, compliance, business) to translate data into actionable insights.</li>
-        <li>Performed data validation, reconciliation, and quality checks to support reliable reporting and decision-making.</li>
+      <ul>
+        <li>Analyzed transaction behavior to detect anomalies and fraud patterns.</li>
+        <li>Built interactive Tableau dashboards for fraud monitoring.</li>
+        <li>Performed data cleaning and preprocessing using Python.</li>
       </ul>
+
+      <div class="links">
+        <a href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-" target="_blank">GitHub</a>
+        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard1" target="_blank">Fraud Overview</a>
+        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard2" target="_blank">Transaction Behavior</a>
+        <a href="https://public.tableau.com/views/creditcardFraud/Dashboard3" target="_blank">Risk Analysis</a>
+      </div>
+    </div>
+
+    <!-- NETFLIX PROJECT -->
+    <div class="card">
+      <h3>Netflix Data Analysis</h3>
+      <div class="desc">
+        Analyzed streaming data to understand viewing patterns, genres, and user behavior trends.
+      </div>
+
+      <div class="tags">
+        <div class="tag">Python</div>
+        <div class="tag">SQL</div>
+        <div class="tag">Data Analysis</div>
+        <div class="tag">Visualization</div>
+      </div>
+
+      <ul>
+        <li>Cleaned and analyzed Netflix dataset for insights.</li>
+        <li>Identified content trends and user preferences.</li>
+      </ul>
+
+      <div class="links">
+        <a href="https://github.com/123Sushmita/Netflix_streaming" target="_blank">GitHub</a>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2>Projects</h2>
-
-    <div class="grid">
-
-      <!-- Credit Card Fraud Project -->
-      <div class="card">
-        <h3>Credit Card Fraud Detection</h3>
-        <div class="desc">End-to-end data analytics project focused on detecting fraudulent transactions using real-world financial data.</div>
-
-        <h4 style="margin-top:10px; color:#38bdf8;">Business Problem</h4>
-        <p style="font-size:14px; color:#cbd5f5;">Financial institutions face significant losses due to undetected fraudulent transactions. The goal was to identify suspicious behavior and reduce risk exposure.</p>
-
-        <h4 style="margin-top:10px; color:#38bdf8;">Approach</h4>
-        <ul style="color:#cbd5f5; font-size:14px; padding-left:18px;">
-          <li>Performed data cleaning and preprocessing on transaction datasets</li>
-          <li>Used SQL for querying and joining large datasets</li>
-          <li>Analyzed transaction patterns and anomalies using Python</li>
-          <li>Built Tableau dashboards to visualize fraud trends and risk indicators</li>
-        </ul>
-
-        <h4 style="margin-top:10px; color:#38bdf8;">Key Insights</h4>
-        <ul style="color:#cbd5f5; font-size:14px; padding-left:18px;">
-          <li>Identified unusual transaction spikes indicating potential fraud</li>
-          <li>Detected high-risk behavior based on transaction frequency and amount</li>
-          <li>Highlighted key patterns used for fraud detection strategies</li>
-        </ul>
-
-        <div class="tags">
-          <div class="tag">Python</div>
-          <div class="tag">SQL</div>
-          <div class="tag">Tableau</div>
-          <div class="tag">Data Analysis</div>
-          <div class="tag">EDA</div>
-          <div class="tag">Visualization</div>
-        </div>
-
-        <div class="links">
-          <a href="https://github.com/123Sushmita/Credit_Card_Fraud_Detection-" target="_blank">GitHub</a>
-          <a href="https://public.tableau.com/views/creditcardFraud/Dashboard1" target="_blank">Fraud Overview</a>
-          <a href="https://public.tableau.com/views/creditcardFraud/Dashboard2" target="_blank">Transaction Behavior</a>
-          <a href="https://public.tableau.com/views/creditcardFraud/Dashboard3" target="_blank">Risk Analysis</a>
-        </div>
-
-        <img src="images/dashboard1.png" alt="Fraud Dashboard">
-      </div>
-
-      <!-- Netflix Project -->
-      <div class="card">
-        <h3>Netflix Data Analysis</h3>
-        <div class="desc">Analyzed streaming data to identify viewing trends, popular genres, and user behavior patterns through data cleaning and visualization.</div>
-
-        <div class="tags">
-          <div class="tag">Python</div>
-          <div class="tag">SQL</div>
-          <div class="tag">Data Analysis</div>
-          <div class="tag">Visualization</div>
-          <div class="tag">README</div>
-        </div>
-
-        <div class="links">
-          <a href="https://github.com/123Sushmita/Netflix_streaming" target="_blank">GitHub</a>
-        </div>
-
-        <img src="images/netflix.png" alt="Netflix Project">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="footer">
+<footer>
   © 2026 Sushmita Dhital | Data Analyst Portfolio
-</div>
+</footer>
 
 </body>
 </html>
+
