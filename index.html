@@ -7,7 +7,7 @@
 
 <style>
   :root{
-    --bg:#060a14;
+    --bg:#050914;
     --card:#0f172a;
     --text:#e5e7eb;
     --muted:#9ca3af;
@@ -26,9 +26,8 @@
 
   nav{
     position:sticky;top:0;
-    background:rgba(6,10,20,0.95);
+    background:rgba(5,9,20,0.95);
     border-bottom:1px solid var(--border);
-    z-index:1000;
   }
 
   .nav-inner{
@@ -39,11 +38,7 @@
     padding:14px 20px;
   }
 
-  .logo{
-    color:var(--accent);
-    font-weight:800;
-    letter-spacing:1px;
-  }
+  .logo{color:var(--accent);font-weight:800}
 
   nav a{
     color:var(--muted);
@@ -52,24 +47,19 @@
     font-size:14px;
   }
 
-  nav a:hover{color:var(--accent)}
-
   header{
     text-align:center;
-    padding:80px 20px 50px;
+    padding:85px 20px 50px;
     border-bottom:1px solid var(--border);
   }
 
-  h1{
-    font-size:48px;
-    letter-spacing:1px;
-  }
+  h1{font-size:48px}
 
   .subtitle{
     color:var(--accent);
-    margin-top:8px;
     font-weight:600;
-    letter-spacing:2px;
+    margin-top:8px;
+    letter-spacing:1px;
   }
 
   .meta{
@@ -79,7 +69,6 @@
   }
 
   section{padding:50px 20px}
-
   .wrap{max-width:1100px;margin:auto}
 
   h2{
@@ -87,14 +76,13 @@
     margin-bottom:18px;
     border-bottom:1px solid var(--border);
     padding-bottom:8px;
-    font-size:22px;
   }
 
-  .intro-card{
-    background:linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.75));
+  .intro{
+    background:var(--card);
     border:1px solid var(--border);
-    padding:22px;
-    border-radius:14px;
+    padding:20px;
+    border-radius:12px;
     color:var(--muted);
   }
 
@@ -109,12 +97,12 @@
     border:1px solid var(--border);
     border-radius:14px;
     padding:20px;
-    transition:0.3s;
+    transition:0.2s;
   }
 
   .card:hover{
-    transform:translateY(-4px);
     border-color:rgba(56,189,248,0.5);
+    transform:translateY(-3px);
   }
 
   .badge{
@@ -144,11 +132,11 @@
 
   li{margin-bottom:6px}
 
-  .section-title{
-    margin-top:12px;
-    color:var(--accent);
+  .impact{
+    margin-top:10px;
+    color:#38bdf8;
+    font-size:13px;
     font-weight:600;
-    font-size:14px;
   }
 
   footer{
@@ -156,7 +144,6 @@
     padding:30px;
     color:var(--muted);
     border-top:1px solid var(--border);
-    margin-top:40px;
   }
 </style>
 </head>
@@ -175,16 +162,16 @@
 
 <header>
   <h1>SUSHMITA DHITAL</h1>
-  <div class="subtitle">DATA ANALYST • MILITARY SPOUSE</div>
-  <div class="meta">SQL | Python | Tableau | Power BI | Financial & Risk Analytics</div>
+  <div class="subtitle">DATA ANALYST (SQL • PYTHON • TABLEAU • POWER BI)</div>
+  <div class="meta">Military Spouse | Financial & Risk Analytics | Data Visualization</div>
 </header>
 
 <section id="about" class="wrap">
-  <h2>About Me</h2>
-  <div class="intro-card">
-    Data Analyst with experience in financial analytics, risk modeling, and business intelligence.
-    Skilled in transforming raw datasets into actionable insights using SQL, Python, Tableau, and Power BI.
-    Passionate about data-driven decision making and building scalable analytical solutions.
+  <h2>Professional Summary</h2>
+  <div class="intro">
+    Data Analyst with hands-on experience in SQL, Python, Tableau, and Power BI.
+    Skilled in analyzing financial datasets, detecting risk patterns, and building dashboards
+    that support data-driven decision-making. Strong focus on turning raw data into business insights.
   </div>
 </section>
 
@@ -197,51 +184,63 @@
     <div class="card">
       <span class="badge done">COMPLETED</span>
       <h3>Credit Card Fraud Detection</h3>
+
       <div class="desc">
-        Built a fraud detection analysis pipeline to identify abnormal transaction behavior using SQL and Python-based EDA.
+        Built an end-to-end fraud detection analysis pipeline to identify abnormal transaction behavior using SQL and Python-based analytics.
       </div>
 
-      <div class="section-title">Key Work</div>
       <ul>
-        <li>Data cleaning and preprocessing using Python</li>
-        <li>SQL-based aggregation for transaction behavior analysis</li>
-        <li>Exploratory Data Analysis (EDA) for anomaly detection</li>
-        <li>Identified fraud-prone transaction patterns</li>
+        <li>Cleaned and structured large transaction dataset using Python</li>
+        <li>Wrote SQL queries for behavioral segmentation and pattern analysis</li>
+        <li>Performed exploratory data analysis to detect anomalies</li>
+        <li>Analyzed transaction frequency, amount spikes, and suspicious patterns</li>
       </ul>
+
+      <div class="impact">
+        → Identified high-risk transaction behaviors using data-driven anomaly detection
+      </div>
     </div>
 
     <!-- NETFLIX -->
     <div class="card">
       <span class="badge progress">IN PROGRESS</span>
       <h3>Netflix Streaming Data Analysis</h3>
+
       <div class="desc">
-        Tableau-based analytics project focused on understanding Netflix content distribution and viewing trends.
+        Tableau visualization project analyzing Netflix content trends, distribution, and viewer patterns.
       </div>
 
-      <div class="section-title">Work In Progress</div>
       <ul>
         <li>Data cleaning and preprocessing using Python</li>
         <li>SQL transformation and dataset structuring</li>
-        <li>Exploratory analysis of content trends</li>
-        <li>Building interactive Tableau dashboard</li>
+        <li>Exploratory analysis of content types, genres, and release trends</li>
+        <li>Building interactive Tableau dashboard (in progress)</li>
       </ul>
+
+      <div class="impact">
+        → Converting raw streaming data into visual insights for content trends
+      </div>
     </div>
 
     <!-- LOAN RISK -->
     <div class="card">
       <span class="badge progress">IN PROGRESS</span>
       <h3>Loan Risk Portfolio Analysis (Morgan Stanley)</h3>
+
       <div class="desc">
-        Financial risk analytics project evaluating loan portfolio performance using SQL and Power BI.
+        Financial risk analytics project focused on evaluating loan portfolio risk using SQL and Power BI dashboards.
       </div>
 
-      <div class="section-title">Key Work</div>
       <ul>
-        <li>Calculated Debt-to-Income (DTI) ratio</li>
-        <li>Calculated Loan-to-Value (LTV) ratio</li>
-        <li>Developed borrower risk classification rules</li>
-        <li>Power BI dashboard for KPI and risk insights</li>
+        <li>Calculated Debt-to-Income (DTI) ratio for borrowers</li>
+        <li>Calculated Loan-to-Value (LTV) ratio for risk assessment</li>
+        <li>Built risk classification rules (High / Medium / Low)</li>
+        <li>Developing Power BI dashboard for KPI tracking and insights</li>
       </ul>
+
+      <div class="impact">
+        → Improving credit risk visibility through financial ratio modeling
+      </div>
     </div>
 
   </div>
