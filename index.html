@@ -7,7 +7,7 @@
 
 <style>
   :root{
-    --bg:#070b16;
+    --bg:#060a14;
     --card:#0f172a;
     --text:#e5e7eb;
     --muted:#9ca3af;
@@ -15,7 +15,7 @@
     --border:rgba(148,163,184,0.18);
   }
 
-  *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+  *{margin:0;padding:0;box-sizing:border-box}
 
   body{
     font-family:Segoe UI, Arial, sans-serif;
@@ -26,8 +26,9 @@
 
   nav{
     position:sticky;top:0;
-    background:rgba(7,11,22,0.9);
+    background:rgba(6,10,20,0.95);
     border-bottom:1px solid var(--border);
+    z-index:1000;
   }
 
   .nav-inner{
@@ -35,73 +36,127 @@
     margin:auto;
     display:flex;
     justify-content:space-between;
-    padding:12px 20px;
+    padding:14px 20px;
   }
 
-  .logo{color:var(--accent);font-weight:800}
+  .logo{
+    color:var(--accent);
+    font-weight:800;
+    letter-spacing:1px;
+  }
 
   nav a{
     color:var(--muted);
-    margin-left:15px;
+    margin-left:16px;
     text-decoration:none;
     font-size:14px;
   }
 
+  nav a:hover{color:var(--accent)}
+
   header{
     text-align:center;
-    padding:60px 20px 30px;
+    padding:80px 20px 50px;
     border-bottom:1px solid var(--border);
   }
 
-  h1{font-size:44px}
-  .subtitle{color:var(--accent);margin-top:6px}
+  h1{
+    font-size:48px;
+    letter-spacing:1px;
+  }
 
-  section{padding:40px 20px}
+  .subtitle{
+    color:var(--accent);
+    margin-top:8px;
+    font-weight:600;
+    letter-spacing:2px;
+  }
+
+  .meta{
+    color:var(--muted);
+    margin-top:10px;
+    font-size:14px;
+  }
+
+  section{padding:50px 20px}
+
   .wrap{max-width:1100px;margin:auto}
 
   h2{
     color:var(--accent);
+    margin-bottom:18px;
     border-bottom:1px solid var(--border);
-    padding-bottom:6px;
-    margin-bottom:15px;
+    padding-bottom:8px;
+    font-size:22px;
+  }
+
+  .intro-card{
+    background:linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.75));
+    border:1px solid var(--border);
+    padding:22px;
+    border-radius:14px;
+    color:var(--muted);
   }
 
   .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:16px;
+    gap:18px;
   }
 
   .card{
     background:var(--card);
     border:1px solid var(--border);
-    border-radius:12px;
-    padding:18px;
+    border-radius:14px;
+    padding:20px;
+    transition:0.3s;
   }
 
-  .desc{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(56,189,248,0.5);
+  }
 
   .badge{
     font-size:12px;
     padding:4px 10px;
     border-radius:999px;
     display:inline-block;
-    margin-bottom:8px;
+    margin-bottom:10px;
   }
 
   .done{background:rgba(34,197,94,0.15);color:#22c55e}
   .progress{background:rgba(245,158,11,0.15);color:#f59e0b}
 
-  ul{padding-left:18px;color:#d1d5db;font-size:14px}
-  li{margin-bottom:5px}
+  h3{margin-bottom:6px}
 
-  .section-title{color:var(--accent);margin-top:10px;font-weight:600}
+  .desc{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:12px;
+  }
+
+  ul{
+    padding-left:18px;
+    color:#d1d5db;
+    font-size:14px;
+  }
+
+  li{margin-bottom:6px}
+
+  .section-title{
+    margin-top:12px;
+    color:var(--accent);
+    font-weight:600;
+    font-size:14px;
+  }
 
   footer{
     text-align:center;
-    padding:25px;
+    padding:30px;
     color:var(--muted);
     border-top:1px solid var(--border);
+    margin-top:40px;
   }
 </style>
 </head>
@@ -121,13 +176,15 @@
 <header>
   <h1>SUSHMITA DHITAL</h1>
   <div class="subtitle">DATA ANALYST • MILITARY SPOUSE</div>
+  <div class="meta">SQL | Python | Tableau | Power BI | Financial & Risk Analytics</div>
 </header>
 
 <section id="about" class="wrap">
-  <h2>About</h2>
-  <div class="card">
-    Data Analyst and military spouse with experience in SQL, Python, Tableau, and Power BI.
-    Focused on financial analytics, risk analysis, and data-driven decision making.
+  <h2>About Me</h2>
+  <div class="intro-card">
+    Data Analyst and military spouse with experience in financial analytics, risk modeling, and business intelligence.
+    Skilled in transforming raw datasets into actionable insights using SQL, Python, Tableau, and Power BI.
+    Passionate about data-driven decision making and building scalable analytical solutions.
   </div>
 </section>
 
@@ -140,17 +197,16 @@
     <div class="card">
       <span class="badge done">COMPLETED</span>
       <h3>Credit Card Fraud Detection</h3>
-
       <div class="desc">
-        SQL and Python-based project analyzing transaction data to detect fraudulent and abnormal behavior patterns.
+        Built a fraud detection analysis pipeline to identify abnormal transaction behavior using SQL and Python-based EDA.
       </div>
 
-      <div class="section-title">Work Done</div>
+      <div class="section-title">Key Work</div>
       <ul>
         <li>Data cleaning and preprocessing using Python</li>
-        <li>SQL-based transaction segmentation and grouping</li>
-        <li>Exploratory Data Analysis (EDA)</li>
-        <li>Identified fraud patterns based on behavior trends</li>
+        <li>SQL-based aggregation for transaction behavior analysis</li>
+        <li>Exploratory Data Analysis (EDA) for anomaly detection</li>
+        <li>Identified fraud-prone transaction patterns</li>
       </ul>
     </div>
 
@@ -158,17 +214,16 @@
     <div class="card">
       <span class="badge progress">IN PROGRESS</span>
       <h3>Netflix Streaming Data Analysis</h3>
-
       <div class="desc">
-        Tableau-based visualization project analyzing Netflix content trends and viewer behavior.
+        Tableau-based analytics project focused on understanding Netflix content distribution and viewing trends.
       </div>
 
       <div class="section-title">Work In Progress</div>
       <ul>
-        <li>Data cleaning using Python</li>
-        <li>SQL-based dataset structuring</li>
-        <li>Exploratory analysis of content distribution</li>
-        <li>Building Tableau dashboard for visualization</li>
+        <li>Data cleaning and preprocessing using Python</li>
+        <li>SQL transformation and dataset structuring</li>
+        <li>Exploratory analysis of content trends</li>
+        <li>Building interactive Tableau dashboard</li>
       </ul>
     </div>
 
@@ -176,17 +231,16 @@
     <div class="card">
       <span class="badge progress">IN PROGRESS</span>
       <h3>Loan Risk Portfolio Analysis (Morgan Stanley)</h3>
-
       <div class="desc">
-        Banking analytics project focused on loan risk evaluation using SQL and Power BI.
+        Financial risk analytics project evaluating loan portfolio performance using SQL and Power BI.
       </div>
 
-      <div class="section-title">Work Done</div>
+      <div class="section-title">Key Work</div>
       <ul>
-        <li>Calculated Debt-to-Income (DTI)</li>
-        <li>Calculated Loan-to-Value (LTV)</li>
-        <li>Risk classification modeling</li>
-        <li>Power BI dashboard development (KPIs & insights)</li>
+        <li>Calculated Debt-to-Income (DTI) ratio</li>
+        <li>Calculated Loan-to-Value (LTV) ratio</li>
+        <li>Developed borrower risk classification rules</li>
+        <li>Power BI dashboard for KPI and risk insights</li>
       </ul>
     </div>
 
