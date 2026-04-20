@@ -15,10 +15,10 @@
     --border:rgba(148,163,184,0.18);
   }
 
-  *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+  *{margin:0;padding:0;box-sizing:border-box}
 
   body{
-    font-family:Segoe UI, Arial, sans-serif;
+    font-family:Segoe UI, Arial;
     background:var(--bg);
     color:var(--text);
     line-height:1.6;
@@ -49,15 +49,14 @@
 
   header{
     text-align:center;
-    padding:60px 20px 30px;
+    padding:60px 20px;
     border-bottom:1px solid var(--border);
   }
 
   h1{font-size:44px}
-  .subtitle{color:var(--accent);margin-top:6px}
+  .subtitle{color:var(--accent)}
 
   section{padding:40px 20px}
-
   .wrap{max-width:1100px;margin:auto}
 
   h2{
@@ -96,7 +95,11 @@
   ul{padding-left:18px;color:#d1d5db;font-size:14px}
   li{margin-bottom:5px}
 
-  .section-title{color:var(--accent);margin-top:10px;font-weight:600}
+  .section-title{
+    color:var(--accent);
+    margin-top:10px;
+    font-weight:600;
+  }
 
   footer{
     text-align:center;
@@ -113,9 +116,7 @@
   <div class="nav-inner">
     <div class="logo">SUSHMITA DHITAL</div>
     <div>
-      <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="https://github.com/123Sushmita">GitHub</a>
     </div>
   </div>
 </nav>
@@ -124,13 +125,6 @@
   <h1>SUSHMITA DHITAL</h1>
   <div class="subtitle">DATA ANALYST</div>
 </header>
-
-<section id="about" class="wrap">
-  <h2>About</h2>
-  <div class="card">
-    Data Analyst specializing in SQL, Python, Tableau, and Power BI with focus on financial and business analytics.
-  </div>
-</section>
 
 <section id="projects" class="wrap">
   <h2>Projects</h2>
@@ -141,58 +135,48 @@
     <div class="card">
       <span class="badge done">COMPLETED</span>
       <h3>Credit Card Fraud Detection</h3>
+
       <div class="desc">
-        Fraud detection analysis using SQL and Python to identify abnormal transaction patterns.
+        End-to-end fraud analytics project focused on identifying abnormal transaction behavior using SQL and Python-based exploratory data analysis.
       </div>
 
-      <div class="section-title">Work Done</div>
+      <div class="section-title">Key Contributions</div>
       <ul>
-        <li>Data cleaning and preprocessing in Python</li>
-        <li>SQL-based transaction analysis</li>
-        <li>EDA for anomaly detection</li>
-        <li>Identified fraud patterns</li>
+        <li>Performed data cleaning and preprocessing on large transaction dataset</li>
+        <li>Used SQL queries for segmentation and aggregation of transaction patterns</li>
+        <li>Conducted exploratory data analysis (EDA) to identify anomalies and fraud indicators</li>
+        <li>Analyzed behavioral patterns such as transaction frequency and amount spikes</li>
+      </ul>
+
+      <div class="section-title">Outcome</div>
+      <ul>
+        <li>Identified high-risk transaction behaviors and fraud-prone patterns</li>
+        <li>Improved understanding of anomaly detection in financial data</li>
       </ul>
     </div>
 
     <!-- NETFLIX -->
     <div class="card">
       <span class="badge progress">IN PROGRESS</span>
-      <h3>Netflix Data Analysis</h3>
+      <h3>Netflix Streaming Data Analysis</h3>
 
       <div class="desc">
-        Tableau-based visualization project analyzing Netflix content trends and viewer patterns.
+        Data analytics project focused on analyzing Netflix content trends, viewer patterns, and content distribution using SQL, Python, and Tableau.
       </div>
 
       <div class="section-title">Work In Progress</div>
       <ul>
-        <li>Data cleaning using Python</li>
-        <li>SQL structuring of dataset</li>
-        <li>Exploratory data analysis</li>
-        <li>Building Tableau dashboard (in progress)</li>
-      </ul>
-    </div>
-
-    <!-- LOAN RISK -->
-    <div class="card">
-      <span class="badge progress">IN PROGRESS</span>
-      <h3>Loan Risk Portfolio Analysis (Morgan Stanley)</h3>
-
-      <div class="desc">
-        Banking analytics project analyzing loan portfolio risk using SQL and Power BI.
-      </div>
-
-      <div class="section-title">SQL Work</div>
-      <ul>
-        <li>Calculated DTI (Debt-to-Income)</li>
-        <li>Calculated LTV (Loan-to-Value)</li>
-        <li>Risk classification logic</li>
+        <li>Data cleaning and preprocessing using Python</li>
+        <li>SQL-based structuring of Netflix content dataset</li>
+        <li>Exploratory analysis of movies vs TV shows</li>
+        <li>Building Tableau dashboard for interactive visualization</li>
       </ul>
 
-      <div class="section-title">Power BI Work</div>
+      <div class="section-title">Analysis Focus</div>
       <ul>
-        <li>KPI dashboards</li>
-        <li>Risk segmentation</li>
-        <li>Income vs debt visualization</li>
+        <li>Content distribution by genre and country</li>
+        <li>Trend analysis over release years</li>
+        <li>Platform content composition insights</li>
       </ul>
     </div>
 
