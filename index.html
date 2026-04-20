@@ -13,27 +13,21 @@
     --muted:#9ca3af;
     --accent:#38bdf8;
     --border:rgba(148,163,184,0.18);
-    --good:#22c55e;
-    --warn:#f59e0b;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 
   body{
     font-family:Segoe UI, Arial, sans-serif;
-    background:radial-gradient(circle at 20% 10%, rgba(56,189,248,0.10), transparent 40%),
-               radial-gradient(circle at 80% 30%, rgba(34,197,94,0.08), transparent 40%),
-               var(--bg);
+    background:var(--bg);
     color:var(--text);
     line-height:1.6;
   }
 
   nav{
     position:sticky;top:0;
-    background:rgba(7,11,22,0.85);
-    backdrop-filter:blur(10px);
+    background:rgba(7,11,22,0.9);
     border-bottom:1px solid var(--border);
-    z-index:1000;
   }
 
   .nav-inner{
@@ -53,31 +47,17 @@
     font-size:14px;
   }
 
-  nav a:hover{color:var(--accent)}
-
   header{
     text-align:center;
-    padding:70px 20px 40px;
+    padding:60px 20px 30px;
     border-bottom:1px solid var(--border);
   }
 
-  h1{font-size:46px}
+  h1{font-size:44px}
 
-  .subtitle{
-    color:var(--accent);
-    font-weight:600;
-    margin-top:6px;
-  }
+  .subtitle{color:var(--accent);margin-top:6px}
 
-  .meta{
-    color:var(--muted);
-    font-size:14px;
-    margin-top:8px;
-  }
-
-  section{
-    padding:40px 20px;
-  }
+  section{padding:40px 20px}
 
   .wrap{max-width:1100px;margin:auto}
 
@@ -88,43 +68,34 @@
     margin-bottom:15px;
   }
 
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:16px;
+  }
+
   .card{
-    background:linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.7));
+    background:var(--card);
     border:1px solid var(--border);
-    border-radius:14px;
+    border-radius:12px;
     padding:18px;
-    margin-bottom:20px;
   }
 
   .desc{color:var(--muted);font-size:14px;margin-bottom:10px}
 
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
-  .tag{font-size:12px;padding:5px 10px;border-radius:999px;background:#020617;border:1px solid var(--border)}
+  .tag{font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:999px;margin-right:6px}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
-
-  ul{padding-left:18px;color:#d1d5db;font-size:14px}
-  li{margin-bottom:6px}
-
-  .section-title{margin-top:10px;color:var(--accent);font-weight:600}
-
-  .badge{
-    display:inline-block;
-    font-size:12px;
-    padding:4px 10px;
-    border-radius:999px;
-    margin-bottom:8px;
-  }
+  .badge{font-size:12px;padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:8px}
 
   .done{background:rgba(34,197,94,0.15);color:#22c55e}
   .progress{background:rgba(245,158,11,0.15);color:#f59e0b}
 
-  footer{
-    text-align:center;
-    padding:25px;
-    color:var(--muted);
-    border-top:1px solid var(--border);
-  }
+  ul{padding-left:18px;color:#d1d5db;font-size:14px}
+  li{margin-bottom:5px}
+
+  .section-title{color:var(--accent);margin-top:10px;font-weight:600}
+
+  footer{text-align:center;padding:25px;color:var(--muted);border-top:1px solid var(--border)}
 </style>
 </head>
 
@@ -144,14 +115,12 @@
 <header>
   <h1>SUSHMITA DHITAL</h1>
   <div class="subtitle">DATA ANALYST</div>
-  <div class="meta">Dallas, Texas • Military Spouse • SQL | Python | Power BI | Tableau</div>
 </header>
 
 <section id="about" class="wrap">
   <h2>About</h2>
   <div class="card">
-    Data Analyst specializing in financial analytics, risk modeling, and business intelligence.
-    Experienced in transforming raw data into actionable insights using SQL, Python, and Power BI.
+    Data Analyst focused on financial analytics, fraud detection, and business intelligence using SQL, Python, and Tableau.
   </div>
 </section>
 
@@ -165,91 +134,63 @@
       <span class="badge done">COMPLETED</span>
       <h3>Credit Card Fraud Detection</h3>
       <div class="desc">
-        End-to-end fraud detection project analyzing transaction patterns to identify suspicious activities.
+        Analyzed transaction data to detect fraudulent behavior patterns using SQL and Python.
       </div>
 
-      <div class="tags">
-        <div class="tag">SQL</div>
-        <div class="tag">Python</div>
-        <div class="tag">Tableau</div>
-      </div>
-
-      <div class="section-title">Key Work</div>
+      <div class="section-title">Work Done</div>
       <ul>
-        <li>Data cleaning and transaction processing</li>
-        <li>Fraud pattern detection using aggregation</li>
-        <li>EDA for anomaly detection</li>
-      </ul>
-
-      <div class="section-title">Outcome</div>
-      <ul>
-        <li>Identified high-risk transaction behavior</li>
+        <li>Data cleaning and preprocessing in Python</li>
+        <li>Exploratory Data Analysis (EDA) for fraud patterns</li>
+        <li>SQL queries for grouping and anomaly detection</li>
+        <li>Identified unusual transaction behavior patterns</li>
       </ul>
     </div>
 
     <!-- NETFLIX -->
     <div class="card">
-      <span class="badge progress">IN PROGRESS</span>
+      <span class="badge done">COMPLETED</span>
       <h3>Netflix Data Analysis</h3>
-
       <div class="desc">
-        Exploratory analysis of Netflix content trends and viewer patterns.
+        Explored Netflix content dataset to identify trends in movies, TV shows, genres, and release patterns.
       </div>
 
-      <div class="tags">
-        <div class="tag">SQL</div>
-        <div class="tag">Python</div>
+      <div class="section-title">Tools Used</div>
+      <div>
+        <span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Tableau</span>
       </div>
 
       <div class="section-title">Work Done</div>
       <ul>
-        <li>Data cleaning and structuring</li>
-        <li>Content trend analysis</li>
-        <li>EDA on movies vs TV shows</li>
-      </ul>
-
-      <div class="section-title">Next Step</div>
-      <ul>
-        <li>Power BI dashboard creation</li>
+        <li>Cleaned and structured Netflix dataset</li>
+        <li>SQL queries for content categorization</li>
+        <li>Python used for EDA and trend analysis</li>
+        <li>Built Tableau dashboard for visualization</li>
       </ul>
     </div>
 
-    <!-- LOAN RISK (MORGAN STANLEY) -->
+    <!-- LOAN RISK -->
     <div class="card">
       <span class="badge progress">IN PROGRESS</span>
       <h3>Loan Risk Portfolio Analysis (Morgan Stanley)</h3>
 
       <div class="desc">
-        Banking analytics project analyzing loan risk using SQL and Power BI.
-        Focused on DTI, LTV, and borrower financial behavior.
+        Banking analytics project analyzing loan risk using DTI, LTV, and borrower financial behavior.
       </div>
 
-      <div class="tags">
-        <div class="tag">SQL</div>
-        <div class="tag">Power BI</div>
-        <div class="tag">CSV</div>
-      </div>
-
-      <div class="section-title">SQL Analysis</div>
+      <div class="section-title">SQL Work</div>
       <ul>
         <li>Calculated Debt-to-Income (DTI)</li>
         <li>Calculated Loan-to-Value (LTV)</li>
-        <li>Created Risk Flag (High / Low)</li>
-        <li>Loan segmentation and aggregation</li>
+        <li>Created risk segmentation rules</li>
       </ul>
 
-      <div class="section-title">Power BI Dashboard</div>
+      <div class="section-title">Power BI Work</div>
       <ul>
-        <li>KPI cards (Loans, DTI, LTV)</li>
-        <li>Risk distribution visualization</li>
-        <li>Income vs debt analysis</li>
-        <li>Loan type breakdown</li>
-      </ul>
-
-      <div class="section-title">Outcome</div>
-      <ul>
-        <li>Improved credit risk insights</li>
-        <li>Identified high-risk borrowers</li>
+        <li>KPI dashboards for loan portfolio</li>
+        <li>Risk distribution analysis</li>
+        <li>Income vs debt visualization</li>
       </ul>
     </div>
 
